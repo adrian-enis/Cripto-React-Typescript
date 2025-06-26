@@ -21,7 +21,7 @@ export default function CriptoSearchForm() {
             name="criptoCurrency" 
             id="criptoCurrency">
                 <option value="">-- Seleccione --</option>
-              
+              {}
             </select>
         </div>
         <input type="submit" value="cotizar" />
