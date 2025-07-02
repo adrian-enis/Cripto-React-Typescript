@@ -7,12 +7,15 @@ import ErrorMessage from "./ErrorMessage"
 
 
 export default function CriptoSearchForm() {
-
+  // Accediendo a la accion de nuestro store
   const cryptoCurrencies = useCryptoStore((state) => state.cryptoCurrencies)
+  const fetchData = useCryptoStore((state) => state.fetchData)
+  // Estado que almacena la criptomoneda y sus Iniciales: BItcoin, "BTC"
   const [pair, setPair] = useState<Pair>({
     currency: "",
     criptoCurrency:""
   })
+  // Estado que almacena el error
   const [error, setError] = useState("")
 
   const handleChange = (e: React.ChangeEvent<HTMLSelectElement>) => {
@@ -29,6 +32,7 @@ export default function CriptoSearchForm() {
     }
 
     setError("")
+    fetchData(pair)
   }
   return (
     <form 

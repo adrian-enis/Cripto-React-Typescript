@@ -19,3 +19,12 @@ export const PairSchema = z.object({
     currency: z.string(),
     criptoCurrency: z.string()
 })
+
+export const CryptoPriceSchema = z.object({
+  IMAGEURL:z.string(),
+  PRICE:z.string(),
+  HIGHDAY:z.string(),
+  LOWDAY:z.string(),
+  CHANGE24HOUR:z.string(),
+  LASTUPDATE:z.string()
+})
