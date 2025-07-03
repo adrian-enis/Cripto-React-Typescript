@@ -1,7 +1,7 @@
 import axios from "axios"
 import {  CryptoCurrenciesResponseSchema, CryptoPriceSchema } from "../schema/crypto-schema"
 import type { Pair } from "../types"
-import { ur } from "zod/v4/locales"
+
 
 // petición HTTP
 export async function getCryptos(){
